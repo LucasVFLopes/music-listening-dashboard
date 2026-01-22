@@ -410,7 +410,19 @@ heatmap_metric = st.radio(
 df_heat = df_filtered.copy()
 
 df_heat["hour"] = df_heat["played_at_br"].dt.hour
-df_heat["weekday"] = df_heat["played_at_br"].dt.day_name(locale="pt_BR")
+df_heat["weekday_en"] = df_heat["played_at_br"].dt.day_name()
+
+weekday_map = {
+    "Monday": "Segunda-feira",
+    "Tuesday": "Terça-feira",
+    "Wednesday": "Quarta-feira",
+    "Thursday": "Quinta-feira",
+    "Friday": "Sexta-feira",
+    "Saturday": "Sábado",
+    "Sunday": "Domingo"
+}
+
+df_heat["weekday"] = df_heat["weekday_en"].map(weekday_map)
 
 weekday_order = [
     "Segunda-feira",
