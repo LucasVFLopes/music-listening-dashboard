@@ -17,8 +17,8 @@ st.markdown(
     """
     <style>
         section[data-testid="stSidebar"] {
-            min-width: 320px;
-            max-width: 320px;
+            min-width: 325px;
+            max-width: 325px;
         }
     </style>
     """,
