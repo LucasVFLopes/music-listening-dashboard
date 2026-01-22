@@ -11,6 +11,21 @@ st.set_page_config(
 )
 
 # ========================
+# AJUSTE DE LARGURA DO SIDEBAR
+# ========================
+st.markdown(
+    """
+    <style>
+        section[data-testid="stSidebar"] {
+            min-width: 280px;
+            max-width: 280px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# ========================
 # TEMA (DARK MODE)
 # ========================
 st.markdown(
