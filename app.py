@@ -36,7 +36,9 @@ st.caption("Exploração interativa dos hábitos de escuta ao longo do tempo")
 # ========================
 @st.cache_data
 def load_data():
-    return pd.read_csv("scrobbles_dashboard_time_enriched.csv")
+    return pd.read_csv(
+        "data/processed/scrobbles_dashboard_time_enriched.csv"
+    )
 
 df = load_data()
 
