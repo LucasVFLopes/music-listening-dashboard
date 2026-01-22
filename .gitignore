@@ -1,0 +1,8 @@
+# Chaves e segredos
+chaves APIs.txt
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dados intermediários (opcional)
+*.ipynb
